@@ -75,3 +75,13 @@ footer {
   overflow: hidden;
   margin-bottom: 15px;
 }
+.certificates a {
+  text-decoration: none; /* Biar garis bawahnya ilang */
+  color: #0070f3; /* Kasih warna biru atau sesuai tema web kamu */
+  transition: 0.3s;
+}
+
+.certificates a:hover {
+  text-decoration: underline; /* Garis bawah muncul pas kursor di atasnya */
+  color: #ff0000; /* Atau berubah warna biar interaktif */
+}
