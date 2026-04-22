@@ -1,87 +1,134 @@
-/* Styling yang kalem dan simple */
+/* Styling Modern & Profesional */
+:root {
+  --primary-color: #0070f3;
+  --text-main: #222;
+  --text-muted: #666;
+  --bg-color: #f0f2f5;
+  --card-bg: #ffffff;
+}
+
 body {
   font-family:
-    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
     sans-serif;
   line-height: 1.6;
-  color: #333;
-  background-color: #fafafa;
+  color: var(--text-main);
+  background-color: var(--bg-color);
   margin: 0;
   padding: 0;
 }
 
 .main-content {
-  max-width: 650px;
-  margin: 60px auto;
+  max-width: 700px;
+  margin: 50px auto;
   padding: 0 20px;
 }
 
 header {
+  display: flex;
+  align-items: center;
+  gap: 25px;
   margin-bottom: 40px;
+  background: var(--card-bg);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-header h1 {
-  font-size: 24px;
-  margin-bottom: 5px;
-  color: #000;
+.profile-frame {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 3px solid var(--primary-color);
 }
 
-header p {
-  color: #666;
+.profile-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top; /* Ini bakal geser fokus foto ke arah atas/muka */
+}
+
+.header-text h1 {
+  font-size: 26px;
+  margin: 0 0 5px 0;
+  letter-spacing: -0.5px;
+}
+
+.header-text p {
+  color: var(--text-muted);
   margin: 0;
+  font-size: 15px;
+}
+
+section {
+  background: var(--card-bg);
+  padding: 25px;
+  margin-bottom: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 h3 {
   font-size: 18px;
-  margin-top: 30px;
-  margin-bottom: 10px;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 5px;
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 p {
-  margin-bottom: 15px;
-  text-align: justify;
+  margin: 0;
+  text-align: left; /* Lebih natural daripada justify untuk web modern */
 }
 
 ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 ul li {
-  margin-bottom: 8px;
+  margin-bottom: 12px;
+  padding-left: 0;
 }
 
+/* Styling Link */
 a {
-  color: #0066cc;
+  color: var(--primary-color);
   text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
 }
 
 a:hover {
-  text-decoration: underline;
+  opacity: 0.7;
+}
+
+/* Khusus Link Sertifikat & Kontak */
+.links a,
+.certificates a {
+  display: inline-block;
+  padding: 5px 0;
+  border-bottom: 1px solid transparent;
+}
+
+.links a:hover,
+.certificates a:hover {
+  border-bottom: 1px solid var(--primary-color);
 }
 
 footer {
-  margin-top: 50px;
-  font-size: 12px;
-  color: #999;
-}
-
-.profile-frame {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-bottom: 15px;
-}
-.certificates a {
-  text-decoration: none; /* Biar garis bawahnya ilang */
-  color: #0070f3; /* Kasih warna biru atau sesuai tema web kamu */
-  transition: 0.3s;
-}
-
-.certificates a:hover {
-  text-decoration: underline; /* Garis bawah muncul pas kursor di atasnya */
-  color: #ff0000; /* Atau berubah warna biar interaktif */
+  text-align: center;
+  margin-top: 40px;
+  padding-bottom: 40px;
+  font-size: 13px;
+  color: var(--text-muted);
 }
