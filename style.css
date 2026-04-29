@@ -49,7 +49,7 @@ header {
 }
 
 .profile-frame img {
-  width: 100%;
+  width: 20%;
   height: 100%;
   object-fit: cover;
   object-position: center top; /* Ini bakal geser fokus foto ke arah atas/muka */
